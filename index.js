@@ -6,7 +6,7 @@ const argv = yargs(hideBin(process.argv)).argv;
 
 void async function main(argv) {
     setInterval(() => {
-        if (argv._) {
+        if (argv._ && argv._[0]) {
             console.log(argv._[0]);
         } else {
             console.log('y');
